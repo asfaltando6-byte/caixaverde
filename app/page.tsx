@@ -20,6 +20,18 @@ const carouselPages=[
  "/assets/carousel-caixa.png",
 ];
 
+const productPages=[
+ ["/assets/carousel-diagnostico.png","Diagnóstico do mercadinho"],
+ ["/assets/ralo-preco.png","Entenda cada ralo"],
+ ["/assets/carousel-preco.png","Controle de preços"],
+ ["/assets/controle-validade.png","Controle de validade"],
+ ["/assets/carousel-validade.png","Redução de perdas"],
+ ["/assets/carousel-estoque.png","Organização do estoque"],
+ ["/assets/controle-fiado.png","Organização do fiado"],
+ ["/assets/carousel-fiado.png","Registro de recebimentos"],
+ ["/assets/carousel-caixa.png","Fechamento de caixa"],
+];
+
 const bonusItems=[
  {title:"Controle de Validade Express",description:"Uma folha rápida para registrar produtos próximos do vencimento e agir antes que virem prejuízo.",image:"/assets/controle-validade.png"},
  {title:"Checklist de Fechamento de Caixa",description:"Um passo a passo simples para conferir entradas, saídas e diferenças no fim do dia.",image:"/assets/carousel-caixa.png"},
@@ -32,7 +44,7 @@ const purchaseExamples=[
 ];
 
 export default function Home(){return <main>
- <header className="brandBar"><a className="brandLogo" href="#top" aria-label="CaixaVerde - início"><span className="brandIcon">↗</span><span>Caixa<strong>Verde</strong><small>GESTÃO SIMPLES PARA MERCADINHOS</small></span></a></header>
+ <header className="brandBar"><a className="brandLogo" href="#top" aria-label="CaixaVerde - início"><span className="brandIcon" aria-hidden="true"><b>CV</b></span><span className="brandWordmark">Caixa<strong>Verde</strong><small>GESTÃO SIMPLES PARA MERCADINHOS</small></span></a></header>
  <div className="topbar" id="top">GUIA PRÁTICO PARA DONOS DE MERCADINHO</div>
  <section className="hero"><div className="shell heroGrid">
   <div className="heroCopy"><span className="eyebrow">● PARA QUEM VENDE, MAS NÃO VÊ O DINHEIRO SOBRAR</span>
@@ -49,7 +61,7 @@ export default function Home(){return <main>
 
  <section className="section compactSection"><div className="shell"><div className="narrow center head"><span className="tag">O QUE VOCÊ VAI DESCOBRIR</span><h2>Os 7 ralos que podem estar <em>consumindo seu lucro</em></h2><p className="lead">Preço, validade, estoque, ruptura, fiado, caixa e despesas invisíveis.</p></div><div className="ralos compactRalos">{ralos.map((r,i)=><article key={r[0]}><b>{String(i+1).padStart(2,"0")}</b><div><h3>{r[0]}</h3></div></article>)}</div><div className="center ctaSpace"><CTA text="QUERO IDENTIFICAR MEUS 7 RALOS"/></div></div></section>
 
- <section className="section cream compactSection"><div className="shell"><div className="narrow center head"><span className="tag">VEJA POR DENTRO</span><h2>Material para <em>usar na loja.</em></h2></div><div className="pages">{[["/assets/ralo-preco.png","Entenda cada ralo"],["/assets/controle-validade.png","Controle a validade"],["/assets/controle-fiado.png","Organize o fiado"]].map(x=><figure key={x[0]}><img src={x[0]} alt={x[1]} width="910" height="1287" loading="lazy" decoding="async"/><figcaption><Check/>{x[1]}</figcaption></figure>)}</div><p className="moreInside">E muito mais...</p></div></section>
+ <section className="section cream compactSection"><div className="shell"><div className="narrow center head"><span className="tag">VEJA POR DENTRO</span><h2>Material para <em>usar na loja.</em></h2></div><div className="productCarousel" aria-label="Páginas do produto passando automaticamente para a esquerda"><div className="pagesTrack">{[...productPages,...productPages].map((x,i)=><figure key={`${x[0]}-${i}`} aria-hidden={i>=productPages.length}><img src={x[0]} alt={i<productPages.length?x[1]:""} width="910" height="1287" loading="lazy" decoding="async"/><figcaption><Check/>{x[1]}</figcaption></figure>)}</div></div><p className="moreInside">E muito mais...</p></div></section>
 
  <section className="section compactSection"><div className="shell narrow center include"><div><span className="tag">CONTEÚDO COMPLETO</span><h2>Prático, direto e <em>aplicável</em></h2><p className="lead">Leia no celular ou imprima as folhas para usar na rotina.</p><div className="list">{["Diagnóstico com pontuação","Plano prático de 7 dias","Checklists de aplicação","Controle de validade e perdas","Fechamento de caixa e fiado","Lista de compras e painel semanal"].map(x=><span key={x}><Check/>{x}</span>)}</div></div></div></section>
 
