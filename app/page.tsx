@@ -44,7 +44,7 @@ const purchaseExamples=[
 ];
 
 export default function Home(){return <main>
- <header className="brandBar"><a className="brandLogo" href="#top" aria-label="CaixaVerde - início"><span className="brandIcon" aria-hidden="true"><b>CV</b></span><span className="brandWordmark">Caixa<strong>Verde</strong><small>GESTÃO SIMPLES PARA MERCADINHOS</small></span></a></header>
+ <header className="brandBar"><a className="brandLogo" href="#top" aria-label="CaixaVerde - início"><span className="brandIcon" aria-hidden="true"><svg viewBox="0 0 64 64" role="img"><rect x="3" y="3" width="58" height="58" rx="18"/><path className="logoBars" d="M17 43V34M28 43V27M39 43V20"/><path className="logoArrow" d="m17 29 11-8 10 3 9-10M40 14h7v7"/><path className="logoLeaf" d="M44 47c7-1 10-5 10-11-7 0-12 3-13 10 3-3 6-5 10-6"/></svg></span><span className="brandWordmark">Caixa<strong>Verde</strong><small>GESTÃO SIMPLES PARA MERCADINHOS</small></span></a></header>
  <div className="topbar" id="top">GUIA PRÁTICO PARA DONOS DE MERCADINHO</div>
  <section className="hero"><div className="shell heroGrid">
   <div className="heroCopy"><span className="eyebrow">● PARA QUEM VENDE, MAS NÃO VÊ O DINHEIRO SOBRAR</span>
