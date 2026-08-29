@@ -7,6 +7,11 @@ const META_PIXEL_ID = "987498647604603";
 export const metadata: Metadata = {
   title: "CaixaVerde | Manual dos 7 Ralos do Mercadinho",
   description: "Descubra os 7 ralos que podem estar consumindo o lucro do seu mercadinho.",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
