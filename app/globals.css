@@ -77,3 +77,9 @@ body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font
 .guaranteeSeal{background:#f4f8f5;border-color:#87ad21;box-shadow:inset 0 0 0 9px #fff,0 18px 36px #0752391a}
 .guaranteeSeal strong,.guarantee small{color:#075239}
 .bonusGrid{max-width:900px}
+
+/* Destaque solicitado para o título da seção "Como usar" */
+.useHead{max-width:900px;padding:28px 30px;border-radius:22px;background:#17261d;box-shadow:0 16px 36px #17261d24}
+.useHead h2,.useHead h2 em,.useHead .lead{color:#fff!important}
+.useHead h2 em{text-shadow:none}
+@media(max-width:560px){.useHead{padding:22px 17px;border-radius:17px}.useHead h2{font-size:30px}}
