@@ -1,5 +1,5 @@
 const Check = () => <span className="check">✓</span>;
-const CHECKOUT_URL = "https://checkout.payt.com.br/3810ba39317d5de43b797ef37e81fc38";
+const CHECKOUT_URL = "https://pay.cakto.com.br/jv9uiic_1127615";
 const CTA = ({text="QUERO PROTEGER O LUCRO DO MEU MERCADINHO"}:{text?:string}) => <a className="cta" href="#bonus">{text} <b>→</b></a>;
 
 const ralos=[
@@ -34,9 +34,9 @@ const productPages=[
 ];
 
 const bonusItems=[
- {title:"Controle de Validade Express",description:"Evite perdas com vencimentos.",value:"R$ 17,00",image:"/assets/controle-validade.png"},
- {title:"Hortifruti que Vende Mais",description:"Faça seus produtos girarem mais.",value:"R$ 27,00",image:"/assets/carousel-estoque.png"},
- {title:"Cross-sell Pronto",description:"Combinações para aumentar cada venda.",value:"R$ 27,00",image:"/assets/carousel-preco.png"},
+ {title:"Controle de Validade Express",description:"Evite perdas com vencimentos.",value:"R$ 27,00",image:"/assets/controle-validade.png"},
+ {title:"Hortifruti que Vende Mais",description:"Faça seus produtos girarem mais.",value:"R$ 47,00",image:"/assets/carousel-estoque.png"},
+ {title:"Cross-sell Pronto",description:"Combinações para aumentar cada venda.",value:"R$ 53,00",image:"/assets/carousel-preco.png"},
 ];
 
 const purchaseExamples=[
@@ -70,7 +70,7 @@ export default function Home(){return <main>
 
  <section className="section who compactWho"><div className="shell narrow center"><span className="tag darkTag">PARA QUEM É</span><h2>Para donos de <em>mercadinhos e mercearias</em></h2><div className="whoGrid">{["Quem controla muita coisa no caderno","Quem não sabe o lucro real","Quem administra com a família","Quem quer uma rotina organizada"].map(x=><span key={x}><Check/>{x}</span>)}</div><p>Sem contabilidade complicada e sem precisar dominar planilhas.</p></div></section>
 
- <section className="section bonusSection" id="bonus"><div className="shell narrow"><div className="center bonusHead"><span className="tag">🎁 BÔNUS GRÁTIS</span><h2>Você recebe <em>R$ 71 em bônus</em></h2><p className="lead">3 materiais extras incluídos hoje.</p></div><div className="bonusGrid">{bonusItems.map((bonus,i)=><article key={bonus.title}><div className="bonusPreview"><img src={bonus.image} alt={`Prévia do bônus ${bonus.title}`} width="910" height="1287" loading="lazy" decoding="async"/><b>🎁 BÔNUS {i+1}</b></div><div><small>GRÁTIS NO SEU KIT</small><h3>{bonus.title}</h3><p>{bonus.description}</p><strong className="bonusValue"><del>{bonus.value}</del> GRÁTIS</strong></div></article>)}</div></div></section>
+ <section className="section bonusSection" id="bonus"><div className="shell narrow"><div className="center bonusHead"><span className="tag">🎁 BÔNUS GRÁTIS</span><h2>Você recebe <em>R$ 127,00 em bônus</em></h2><p className="lead">3 materiais extras incluídos hoje.</p></div><div className="bonusGrid">{bonusItems.map((bonus,i)=><article key={bonus.title}><div className="bonusPreview"><img src={bonus.image} alt={`Prévia do bônus ${bonus.title}`} width="910" height="1287" loading="lazy" decoding="async"/><b>🎁 BÔNUS {i+1}</b></div><div><small>GRÁTIS NO SEU KIT</small><h3>{bonus.title}</h3><p>{bonus.description}</p><strong className="bonusValue"><del>{bonus.value}</del> GRÁTIS</strong></div></article>)}</div></div></section>
 
  <section className="section offer" id="oferta"><div className="shell narrow"><div className="offerCard"><header><small>OFERTA ESPECIAL</small><h2>Comece hoje a enxergar onde o dinheiro do seu mercadinho está indo</h2></header><div className="offerMockup"><img src="/assets/product-mockup-v3.webp" alt="Kit completo CaixaVerde: Manual dos 7 Ralos" width="1254" height="1254" loading="lazy" fetchPriority="low" decoding="async"/></div><div className="offerBundleSummary"><strong>VOCÊ RECEBE UM KIT COMPLETO</strong><span>1 manual + 3 bônus + folhas práticas para imprimir</span></div><div className="offerBody"><div><h3>CaixaVerde</h3><p>Manual dos 7 Ralos que Fazem o Dinheiro Sumir</p>{["Manual completo em PDF","Diagnóstico com pontuação","Plano de ação de 7 dias","Checklists de aplicação","Controle de validade e perdas","Controle de caixa e fiado","Lista de compras e painel semanal","3 bônus práticos incluídos"].map(x=><span className="offerItem" key={x}><Check/>{x}</span>)}</div><div className="buy"><small>ACESSO AO MATERIAL COMPLETO</small><div className="price"><span>por apenas</span><strong><sup>R$</sup>37<sup>,00</sup></strong><span>pagamento único</span></div><a className="cta offerCta" href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">QUERO RECEBER TUDO AGORA <b>→</b></a><p>🔒 <strong>Compra segura</strong><small>Pagamento em ambiente protegido</small></p></div></div></div></div></section>
 
