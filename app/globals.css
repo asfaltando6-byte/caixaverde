@@ -97,3 +97,7 @@ body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font
 .bonusPreview b{background:#f8c946;color:#173327}
 @media(max-width:800px){.visual>img{width:min(112%,590px);max-width:590px;margin:-20px auto -25px}.offerMockup img{width:min(100%,520px)}}
 @media(max-width:560px){.visual>img{width:calc(100% + 46px);max-width:470px;margin:-15px -23px -24px}.offerMockup{padding:4px 8px 0}.offerMockup img{width:108%;max-width:430px;margin:-10px -4% -22px}.bonusGrid article{min-height:0}.bonusValue{font-size:13px}}
+
+/* Nova oferta: layouts de produtos nas gôndolas */
+html,body{max-width:100%;overflow-x:hidden}.cta{max-width:100%;min-height:56px;text-align:center;line-height:1.25;touch-action:manipulation}.visual>img,.offerMockup img{object-fit:contain}.bonusPreview img,.pagesTrack img,.carouselTrack img{object-position:center}.methodCarousel,.productCarousel{transform:translateZ(0)}
+@media(max-width:560px){.heroCopy{max-width:100%}.hero h1{font-size:clamp(31px,9.6vw,38px);overflow-wrap:anywhere}.heroCopy>p{font-size:16px!important}.quick{display:grid;grid-template-columns:1fr;justify-items:start;max-width:330px;margin-inline:auto}.quick span{text-align:left}.painGrid,.list,.whoGrid{grid-template-columns:1fr}.ralos article:last-child{grid-column:auto;width:100%}.cta{width:100%;padding-inline:14px}.offerCard header h2{font-size:22px;line-height:1.2}.offerBody{padding-inline:16px}.price strong{font-size:50px}.bonusHead h2{font-size:31px}.guaranteeCard{padding-inline:4px}}

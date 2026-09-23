@@ -5,8 +5,8 @@ import "./globals.css";
 const META_PIXEL_ID = "987498647604603";
 
 export const metadata: Metadata = {
-  title: "CaixaVerde | Manual dos 7 Ralos do Mercadinho",
-  description: "Descubra os 7 ralos que podem estar consumindo o lucro do seu mercadinho.",
+  title: "Kit Gôndola Lucrativa | 30 Layouts Prontos",
+  description: "Layouts prontos para organizar os produtos nas gôndolas do seu mercadinho.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
