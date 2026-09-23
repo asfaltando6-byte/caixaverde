@@ -19,13 +19,41 @@ const carouselPages = [
   "/assets/layout-cafe-da-manha.webp",
   "/assets/layout-limpeza.webp",
   "/assets/layout-caixa.webp",
+  "/assets/layout-snacks-bebidas.webp",
+  "/assets/layout-higiene-pessoal.webp",
 ];
 
 const productPages = [
-  ["/assets/layout-alimentos-basicos.webp", "Alimentos básicos"],
-  ["/assets/layout-cafe-da-manha.webp", "Café da manhã"],
-  ["/assets/layout-limpeza.webp", "Produtos de limpeza"],
-  ["/assets/layout-caixa.webp", "Produtos no caixa"],
+  {
+    image: "/assets/layout-alimentos-basicos.webp",
+    title: "Alimentos básicos",
+    description: "Pesados embaixo, itens de maior giro ao alcance e complementares próximos.",
+  },
+  {
+    image: "/assets/layout-cafe-da-manha.webp",
+    title: "Café da manhã",
+    description: "Café, leite, açúcar e biscoitos organizados pela mesma ocasião de compra.",
+  },
+  {
+    image: "/assets/layout-limpeza.webp",
+    title: "Produtos de limpeza",
+    description: "Categorias separadas por uso e embalagens maiores nas prateleiras inferiores.",
+  },
+  {
+    image: "/assets/layout-caixa.webp",
+    title: "Área do caixa",
+    description: "Itens pequenos, de compra rápida e boa margem próximos ao pagamento.",
+  },
+  {
+    image: "/assets/layout-snacks-bebidas.webp",
+    title: "Snacks e bebidas",
+    description: "Snacks na altura dos olhos e bebidas pesadas nos níveis inferiores.",
+  },
+  {
+    image: "/assets/layout-higiene-pessoal.webp",
+    title: "Higiene pessoal",
+    description: "Itens lucrativos ao alcance dos olhos e volumes grandes na base.",
+  },
 ];
 
 const bonusItems = [
@@ -70,6 +98,12 @@ export default function Home() {
       <div className="useNote"><Check /><span><strong>Não precisa trocar suas gôndolas.</strong> Adapte os modelos ao espaço e aos produtos que você já possui.</span></div>
     </div></section>
 
+    <section className="section productShowcase" aria-labelledby="layouts-titulo"><div className="shell">
+      <div className="narrow center head"><span className="tag">VEJA O PRODUTO POR DENTRO</span><h2 id="layouts-titulo">6 layouts explicativos para <em>organizar suas gôndolas</em></h2><p className="lead">Modelos inspirados no padrão de exposição de supermercados e atacarejos brasileiros.</p></div>
+      <div className="productCarousel" aria-label="Seis exemplos de layouts de produtos em gôndolas"><div className="pagesTrack">{[...productPages, ...productPages].map((item, i) => <figure key={`${item.image}-${i}`} aria-hidden={i >= productPages.length}><Image src={item.image} alt={i < productPages.length ? `Layout de ${item.title} em gôndola de atacarejo` : ""} width={1122} height={1402} sizes="(max-width: 560px) 78vw, 260px" quality={76} /><figcaption><span><Check />{item.title}</span><p>{item.description}</p></figcaption></figure>)}</div></div>
+      <p className="showcaseNote"><strong>Use como referência visual:</strong> adapte a quantidade de frentes, marcas e embalagens ao espaço da sua loja.</p>
+    </div></section>
+
     <section className="section method"><div className="shell split">
       <div><span className="tag darkTag">O MECANISMO</span><h2>Método da<br /><em>Gôndola Lucrativa</em></h2><p className="lead">Saia do improviso e organize cada categoria seguindo uma lógica visual fácil de repetir.</p>
         <div className="steps">{[
@@ -94,12 +128,6 @@ export default function Home() {
       <div className="narrow center head"><span className="tag">O QUE ORIENTA CADA LAYOUT</span><h2>5 princípios para uma gôndola <em>mais clara e organizada</em></h2><p className="lead">Cada modelo mostra uma lógica simples para posicionar os produtos.</p></div>
       <div className="ralos compactRalos">{principles.map((item, i) => <article key={item[0]}><b>{String(i + 1).padStart(2, "0")}</b><div><h3>{item[0]}</h3><p>{item[1]}</p></div></article>)}</div>
       <div className="center ctaSpace"><CTA text="QUERO OS LAYOUTS PRONTOS" /></div>
-    </div></section>
-
-    <section className="section cream compactSection"><div className="shell">
-      <div className="narrow center head"><span className="tag">VEJA POR DENTRO</span><h2>Modelos para <em>usar como referência</em></h2><p className="lead">Gôndolas organizadas por categoria e nível de prateleira.</p></div>
-      <div className="productCarousel" aria-label="Layouts de gôndolas passando automaticamente"><div className="pagesTrack">{[...productPages, ...productPages].map((item, i) => <figure key={`${item[0]}-${i}`} aria-hidden={i >= productPages.length}><Image src={item[0]} alt={i < productPages.length ? item[1] : ""} width={1024} height={1280} sizes="(max-width: 560px) 72vw, 225px" quality={74} /><figcaption><Check />{item[1]}</figcaption></figure>)}</div></div>
-      <p className="moreInside">E muitos outros layouts...</p>
     </div></section>
 
     <section className="section compactSection"><div className="shell narrow center include"><div>

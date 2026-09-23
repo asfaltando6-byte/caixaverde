@@ -101,3 +101,21 @@ body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font
 /* Nova oferta: layouts de produtos nas gôndolas */
 html,body{max-width:100%;overflow-x:hidden}.cta{max-width:100%;min-height:56px;text-align:center;line-height:1.25;touch-action:manipulation}.visual>img,.offerMockup img{object-fit:contain}.bonusPreview img,.pagesTrack img,.carouselTrack img{object-position:center}.methodCarousel,.productCarousel{transform:translateZ(0)}
 @media(max-width:560px){.heroCopy{max-width:100%}.hero h1{font-size:clamp(31px,9.6vw,38px);overflow-wrap:anywhere}.heroCopy>p{font-size:16px!important}.quick{display:grid;grid-template-columns:1fr;justify-items:start;max-width:330px;margin-inline:auto}.quick span{text-align:left}.painGrid,.list,.whoGrid{grid-template-columns:1fr}.ralos article:last-child{grid-column:auto;width:100%}.cta{width:100%;padding-inline:14px}.offerCard header h2{font-size:22px;line-height:1.2}.offerBody{padding-inline:16px}.price strong{font-size:50px}.bonusHead h2{font-size:31px}.guaranteeCard{padding-inline:4px}}
+
+/* Terceira dobra — vitrine de layouts baseada em gôndolas brasileiras */
+.productShowcase{position:relative;overflow:hidden;background:#f8f5ec;border-block:1px solid #e1e7e2}
+.productShowcase:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 12% 18%,#b7d93620 0 120px,transparent 121px),radial-gradient(circle at 88% 78%,#07523910 0 170px,transparent 171px);pointer-events:none}
+.productShowcase .shell{position:relative;z-index:1}
+.productShowcase .head{margin-bottom:22px}
+.productShowcase .lead{max-width:720px;margin-bottom:0}
+.productShowcase .productCarousel{padding:22px 0 34px}
+.productShowcase .pagesTrack{gap:20px;animation-duration:56s}
+.productShowcase .pagesTrack figure{flex-basis:260px;width:260px;padding:10px;border:2px solid #d9e4dc;box-shadow:0 18px 40px #07523918}
+.productShowcase .pagesTrack figure:nth-child(even){transform:translateY(10px)}
+.productShowcase .pagesTrack img{aspect-ratio:4/5;border-radius:10px;background:#eef2ee}
+.productShowcase .pagesTrack figcaption{display:block;min-height:136px;padding:13px 9px 8px;text-align:left}
+.productShowcase .pagesTrack figcaption>span{display:flex;align-items:center;gap:8px;color:#123c2b;font-size:17px;font-weight:900;line-height:1.2}
+.productShowcase .pagesTrack figcaption p{margin:9px 0 0!important;color:#405148!important;font-size:14px;line-height:1.45;font-weight:550}
+.showcaseNote{max-width:760px;margin:4px auto 0!important;padding:13px 17px;border:1px solid #cdddcf;border-radius:14px;background:#fff;color:#31483a!important;font-size:14px!important;line-height:1.45!important;text-align:center;box-shadow:0 9px 24px #0752390c}
+@media(max-width:800px){.productShowcase .pagesTrack figure{flex-basis:235px;width:235px}.productShowcase .pagesTrack figcaption{min-height:145px}}
+@media(max-width:560px){.productShowcase{padding:36px 0}.productShowcase .head{margin-bottom:12px}.productShowcase .head h2{font-size:31px}.productShowcase .productCarousel{padding:14px 0 25px}.productShowcase .pagesTrack{gap:14px;animation-duration:46s}.productShowcase .pagesTrack figure{flex-basis:78vw;width:78vw;max-width:310px;padding:8px}.productShowcase .pagesTrack figcaption{min-height:126px;padding:12px 8px 7px}.productShowcase .pagesTrack figcaption>span{font-size:17px}.productShowcase .pagesTrack figcaption p{font-size:15px!important}.showcaseNote{padding:12px 14px;font-size:14px!important;text-align:left}}
