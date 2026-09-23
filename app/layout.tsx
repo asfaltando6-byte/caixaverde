@@ -5,8 +5,8 @@ import "./globals.css";
 const META_PIXEL_ID = "987498647604603";
 
 export const metadata: Metadata = {
-  title: "Kit Gôndola Lucrativa | 30 Layouts Prontos",
-  description: "Layouts prontos para organizar os produtos nas gôndolas do seu mercadinho.",
+  title: "Manual Gôndola Lucrativa | Passo a Passo + Exemplos",
+  description: "Aprenda a montar e organizar gôndolas com um manual passo a passo e exemplos práticos em PDF.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
